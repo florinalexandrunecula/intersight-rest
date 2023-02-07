@@ -184,8 +184,8 @@ def intersight_call(http_method="", resource_path="", query_params={}, body={}, 
     bodyString = ""
 
     # Verify an accepted HTTP verb was chosen
-    if(method not in ['GET','POST','PATCH','DELETE']):
-        raise ValueError('Please select a valid HTTP verb (GET/POST/PATCH/DELETE)')
+    if method not in ['GET', 'POST', 'PATCH', 'DELETE', 'PUT']:
+        raise ValueError('Please select a valid HTTP verb (GET/POST/PATCH/DELETE/PUT)')
 
     # Verify the resource path isn't empy & is a valid <str> object
     if(resource_path != "" and type(resource_path) is not str):
